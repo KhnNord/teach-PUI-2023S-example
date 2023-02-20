@@ -1,0 +1,34 @@
+/* CSS for product detail section */
+
+select {
+	padding:  15px;
+	width: 210px;
+}
+
+.product-container {
+	text-align: center;
+}
+
+.product-container img {
+	width: 420px;
+}
+
+#add-cart {
+	margin-top: 55px;
+}
+
+#add-cart span.highlight {
+	border: 1px solid black;
+}
+
+#add-cart span {
+	font-weight:  bold;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#add-cart span {
+	width: 160px;
+	padding: 15px;
+}

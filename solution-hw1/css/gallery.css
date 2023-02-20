@@ -1,0 +1,24 @@
+/* CSS for product gallery section */
+
+.item:hover {
+	background-color: yellow;
+}
+
+.item {
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+	text-decoration: underline;
+}
+
+.item.name {
+	text-decoration: underline;
+}
+
+.item img {
+	width:  400px;
+}
+
+p.name:hover {
+	font-weight: bold;
+}

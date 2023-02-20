@@ -1,0 +1,35 @@
+/* CSS for cart section */
+
+button {
+	cursor: pointer;
+}
+
+.cart {
+	text-align: center;
+}
+
+#item-listing {
+	border-bottom:  5px solid black;
+	padding-bottom:  20px;
+}
+
+#item-listing img {
+	width: 200px;
+}
+
+p.remove {
+	padding-top: 0;
+	font-size: small;
+	text-decoration: underline;
+	font-weight:  bold;
+	cursor: pointer;
+}
+
+#checkout {
+	padding-top: 20px;
+}
+
+#checkout button {
+	width:  150px;
+	padding: 20px;
+}
