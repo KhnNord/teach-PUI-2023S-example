@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jiaxi Gu">
+    <title>Assignment2 Product Detail</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/product.css" type="text/css"/>
+    <link rel="stylesheet" href="css/cart.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="navi">
+        <a href="index.html"><img src="assets/logo/logo-01.svg" alt="Picture of logo" class="logo"/></a>
+              <div class="navi-right">
+                  <div class="navi12">
+                      <div class="navi1">
+                          <a href="index.html">PRODUCTS</a>
+                      </div>
+                      <div class="navi2">
+                          <a href="cart.html">CART</a>
+                      </div>
+                  </div>
+                  <hr class="break">
+                  <p></p><br>
+                  <p class="topic">Original cinnamon roll</p>
+              </div>
+      </div>
+      <div id="original-detail">
+        <img src="assets/products/original-cinnamon-roll.jpg" alt="Picture of original cinnamon roll" class="detail_img"/>
+        <div id="select">
+            <p class="customize">Customize our delicious,</p><br>
+            <p class="customize">hand-made cinnamon roll to</p><br>
+            <p class="customize">your liking!</p><br>
+            <p></p><br>
+            <p></p><br>
+            <p></p>
+            <form target="_blank" method="POST" action="/cart.html">
+                <label for="glazing">Glazing:</label>
+                <p></p>
+                <select name="glazing" id="glazing" class="choose">
+                  <option value="original">Keep Original</option>
+                  <option value="sugar">Sugar milk</option>
+                  <option value="vanilla">Vanilla milk</option>
+                  <option value="chocolate">Double chocolate</option>
+                </select>
+                <p></p><br>
+                <p></p><br>
+                <label for="size">Pack size:</label>
+                <p></p>
+                <select name="size" id="size" class="choose">
+                  <option value="1">1</option>
+                  <option value="3">3</option>
+                  <option value="6">6</option>
+                  <option value="12">12</option>
+                </select>
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+                <div class = "item_total">
+                  <div id="item_price">$2.49</div>
+                  <div id="item_add">
+                    <button onclick="document.location = 'cart.html'" class="add">Add to Cart</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+      </div>
+  </body>
+</html>
