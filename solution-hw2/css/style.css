@@ -1,0 +1,68 @@
+/* General style definition */
+
+body {
+    font-family:sans-serif;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.logo {
+    width: 450px;
+    height: 280px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+.navi {
+    display: flex;
+}
+
+.navi-right {
+    flex: 1 0 auto;
+}
+
+.navi12 {
+    display: flex;
+}
+
+.navi1 {
+    text-align: center;
+    width: 150px;
+    margin: 45px 40px 30px 390px;
+    font-size: 25px;
+    color: black;
+}
+
+.navi1:hover, .navi1:visited, .navi1:link, .navi1:active {
+    background: yellow;
+    font-weight: bold;
+    color: black;
+}
+
+.navi2{
+    text-align: center;
+    width: 100px;
+    font-size: 25px;
+    margin: 45px 10px 30px 10px;
+    color: black;
+}
+
+.navi2:hover, .navi2:visited, .navi2:link, .navi2:active{
+    background: yellow;
+    font-weight: bold;
+    color: black;
+}
+
+.break {
+    height: 5px;
+    background: black;
+}
+
+.topic {
+    margin-top: 10px;
+    font-size: 32px;
+}
