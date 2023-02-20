@@ -25,7 +25,7 @@ a:hover, a:visited, a:link, a:active {
     flex: 1 0 auto;
 }
 
-.navi12 {
+.naviGroup {
     display: flex;
 }
 

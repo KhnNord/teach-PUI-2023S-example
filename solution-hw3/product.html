@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jiaxi Gu">
-    <title>Assignment2 Product Detail</title>
+    <title>Assignment3 Product Detail</title>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/product.css" type="text/css"/>
     <link rel="stylesheet" href="css/cart.css" type="text/css"/>
+    <script defer src="js/priceCal.js"></script>
   </head>
   <body>
     <div class="navi">
         <a href="index.html"><img src="assets/logo/logo-01.svg" alt="Picture of logo" class="logo"/></a>
               <div class="navi-right">
-                  <div class="navi12">
+                  <div class="naviGroup">
                       <div class="navi1">
                           <a href="index.html">PRODUCTS</a>
                       </div>
@@ -36,34 +37,26 @@
             <p></p><br>
             <p></p>
             <form target="_blank" method="POST" action="/cart.html">
-                <label for="glazing">Glazing:</label>
-                <p></p>
-                <select name="glazing" id="glazing" class="choose">
-                  <option value="original">Keep Original</option>
-                  <option value="sugar">Sugar milk</option>
-                  <option value="vanilla">Vanilla milk</option>
-                  <option value="chocolate">Double chocolate</option>
-                </select>
-                <p></p><br>
-                <p></p><br>
-                <label for="size">Pack size:</label>
-                <p></p>
-                <select name="size" id="size" class="choose">
-                  <option value="1">1</option>
-                  <option value="3">3</option>
-                  <option value="6">6</option>
-                  <option value="12">12</option>
-                </select>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <div class = "item_total">
-                  <div id="item_price">$2.49</div>
-                  <div id="item_add">
-                    <button onclick="document.location = 'cart.html'" class="add">Add to Cart</button>
-                  </div>
-                </div>
-              </form>
+              <label for="glazing">Glazing:</label>
+              <p></p>
+              <select name="glazing" id="glazing" class="choose" onchange="glazingChange(this)"></select>
+              <p></p><br>
+              <p></p><br>
+              <p></p>
+              <label for="size">Pack size:</label>
+              <p></p>
+              <select name="size" id="pack" class="choose" onchange="packChange(this)">
+              </select>
+            </form>
+            <p></p><br>
+            <p></p><br>
+            <p></p>
+            <div class = "item_total">
+              <div id="item_price">$2.49</div>
+              <div id="item_add">
+                <button onclick="document.location = 'cart.html'" class="add">Add to Cart</button>
+              </div>
+            </div>
         </div>
       </div>
   </body>

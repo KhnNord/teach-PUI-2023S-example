@@ -1,18 +1,18 @@
 class Glazing {
-    text;
     value;
-    constructor(newValue, newText) {
-        text = newText;
-        value = newValue;
+    text;
+    constructor(value, text) {
+        this.value = value;
+        this.text = text;
     }
 }
 
 class Pack {
-    text;
     value;
-    constructor(newValue, newText) {
-        text = newText;
-        value = newValue;
+    text;
+    constructor(value, text) {
+        this.value = value;
+        this.text = text;
     }
 }
 
@@ -29,17 +29,17 @@ let curr = {
 for(var i = 0; i < packOption.length; i++) {
     var choice1 = packOption[i];
     var choice2 = document.createElement('option');
-    choice2.value = choice1.value;
     choice2.textContent = choice1.text;
-    packSel.add(choice2);
+    choice2.value = choice1.value;
+    packSel.appendChild(choice2);
 }
 
 for(var i = 0; i < glazingOption.length; i++) {
     var choice1 = glazingOption[i];
     var choice2 = document.createElement('option');
-    choice2.value = choice1.value;
     choice2.textContent = choice1.text;
-    glazingSel.add(choice2);
+    choice2.value = choice1.value;
+    glazingSel.appendChild(choice2);
 }
 function calculate() {
     const currPrice = (parseFloat(curr.base) + parseFloat(curr.glazing)) * parseFloat(curr.pack);
@@ -47,14 +47,14 @@ function calculate() {
     curr.element.innerText = "$" + currPrice.toFixed(2);
 }
 
-function newGlazing(element) {
+function glazingChange(element) {
     const newGlazing = element.value;
     curr.glazing = newGlazing;
     curr.element = document.querySelector('#item_price');
     calculate();
 }
 
-function newPack(element) {
+function packChange(element) {
     const newPack = element.value;
     curr.pack = newPack;
     curr.element = document.querySelector('#item_price');
