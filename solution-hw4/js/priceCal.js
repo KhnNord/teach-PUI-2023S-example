@@ -14,6 +14,7 @@ detailTitle.innerText = rollType + ' Cinnamon Roll';
 const detailBasePrice = document.querySelector('#');
 detailBasePrice.innerText = "$" + rolls[rollType].basePrice;
 
+let cart = []
 class Glazing {
     value;
     text;
@@ -66,6 +67,8 @@ function calculate() {
 function glazingChange(element) {
     const newGlazing = element.value;
     curr.glazing = newGlazing;
+    const glazingName = element.options[element.selectedIndex].text;
+    curr.glazingText = glazingName;
     curr.element = document.querySelector('#item_price');
     calculate();
 }
@@ -73,17 +76,32 @@ function glazingChange(element) {
 function packChange(element) {
     const newPack = element.value;
     curr.pack = newPack;
+    const packName = element.options[element.selectedIndex].text;
+    current.packDisplay = packName;
     curr.element = document.querySelector('#item_price');
     calculate();
 }
 
-let cart = []
-
 class Roll {
-  constructor(rollType, rollGlazing, packSize, basePrice) {
-  this.type = rollType;
-  this.glazing = rollGlazing;
-  this.size = packSize;
-  this.basePrice = basePrice;
-  }
+    size;
+    basePrice;
+    type;
+    glazing;
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+    this.type = rollType;
+    this.glazing = rollGlazing;
+    this.size = packSize;
+    this.basePrice = basePrice;
+    }
 }
+
+function addCart(){
+    let newItem = new Roll(
+      rollType,
+      current.glazingText,
+      current.packDisplay,
+      current.base
+    );
+    cart.push(newItem);
+    console.log(cart);
+  }

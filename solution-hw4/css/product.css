@@ -57,6 +57,13 @@
     font-size: 25px;
 }
 
+#glazingOptions.choose{
+    width: 320px;
+}
+#packOptions.choose{
+    width: 320px;
+}
+
 .choose {
     width: 280px;
     height: 40px;
