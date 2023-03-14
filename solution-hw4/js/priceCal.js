@@ -2,17 +2,24 @@ const queryString = window.location.search;
 console.log(queryString);
 const params = new URLSearchParams(queryString);
 console.log(params);
-const rollType = params.get('');
+const rollType = params.get('roll');
 console.log(rollType);
 
-const rollImage = document.querySelector('#');
-rollImage.src = 'assets/products/' + rolls[rollType].imageFile;
-
-const detailTitle = document.querySelector('#');
-detailTitle.innerText = rollType + ' Cinnamon Roll';
-
-const detailBasePrice = document.querySelector('#');
-detailBasePrice.innerText = "$" + rolls[rollType].basePrice;
+//Image initialization
+const rollImage = document.querySelector('#roll_detail_img');
+if (rollType != null){
+    rollImage.src = 'assets/products/' + rolls[rollType].imageFile;
+}
+//Title initialization
+const detailTitle = document.querySelector('#detail_topic');
+if (rollType != null){
+    detailTitle.innerText = rollType + ' Cinnamon Roll';
+}
+//Price number initialization
+const detailBasePrice = document.querySelector('#item_price');
+if (rollType != null){
+    detailBasePrice.innerText = "$" + rolls[rollType].basePrice;
+}
 
 let cart = []
 class Glazing {
@@ -39,8 +46,10 @@ let glazingSel = document.querySelector('#glazing');
 let packSel = document.querySelector('#pack');
 let curr = {
     glazing: Number(0),
+    glazingText: "Keep Original",
     pack: Number(1),
-    base: Number(2.49)
+    packDisplay: '1',
+    base: Number(rolls[rollType].basePrice)
 }
 
 for(var i = 0; i < packOption.length; i++) {
@@ -77,7 +86,7 @@ function packChange(element) {
     const newPack = element.value;
     curr.pack = newPack;
     const packName = element.options[element.selectedIndex].text;
-    current.packDisplay = packName;
+    curr.packDisplay = packName;
     curr.element = document.querySelector('#item_price');
     calculate();
 }
@@ -88,20 +97,15 @@ class Roll {
     type;
     glazing;
     constructor(rollType, rollGlazing, packSize, basePrice) {
-    this.type = rollType;
-    this.glazing = rollGlazing;
     this.size = packSize;
     this.basePrice = basePrice;
+    this.type = rollType;
+    this.glazing = rollGlazing;
     }
 }
 
 function addCart(){
-    let newItem = new Roll(
-      rollType,
-      current.glazingText,
-      current.packDisplay,
-      current.base
-    );
+    let newItem = new Roll(rollType, curr.glazingText, curr.packDisplay, curr.base);
     cart.push(newItem);
     console.log(cart);
   }

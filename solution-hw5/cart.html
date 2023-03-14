@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jiaxi Gu">
+    <title>Assignment4 Cart</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/product.css" type="text/css"/>
+    <link rel="stylesheet" href="css/cart.css" type="text/css"/>
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/priceCal.js"></script>
+  </head>
+  <body>
+    <div class="navi">
+        <a href="index.html"><img src="assets/logo/logo-01.svg" alt="Picture of logo" class="logo"/></a>
+        <div class="navi-right">
+            <div class="naviGroup">
+                <div class="navi1">
+                    <a href="index.html">PRODUCTS</a>
+                </div>
+                <div class="navi2">
+                    <a href="cart.html">CART</a>
+                </div>
+            </div>
+            <hr class="break">
+            <p></p><br>
+            <p class="topic">Shopping Cart</p>
+        </div>
+    </div>
+    <div class="cart">
+        <template id="newcart">
+          <div class="cart_line">
+            <div class="cart_pic">
+              <img src=" " alt="cinnamon roll" class="cart_img" id="cart_img_id"/>
+              <a href="" class="remove">Remove</a>
+            </div>
+            <div class="cart_description">
+              <p id="cart_item_name">Double Chocolate Cinnamon Roll</p>
+              <p id="cart_glazing">Glazing: Sugar milk</p>
+              <p id="cart_pack_size">Pack size: 6</p>
+            </div>
+            <p class="price" id="cart_item_price">$27.45</p>
+          </div>
+        </template>
+        <hr class="break">
+        <div class="total">
+          <p id="total1">Total:</p>
+          <p id="total2">$29.94</p>
+        </div>
+        <input type="submit" value="Checkout" class="checkout">
+    </div>
+  </body>
+</html>

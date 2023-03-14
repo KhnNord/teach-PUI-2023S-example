@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+      <title>PUI HW5</title>
+      <link rel="stylesheet" href = "css/style.css"/>
+      <script defer src="js/rollsData.js"></script>
+      <script defer src="js/price.js"></script>
+    </head>
+
+    <body>
+      <div class="nav">
+        <a href="index.html"><img src="assets/logo/logo-01.svg" alt="logo picture" class="logo"/></a>
+        <div class="nav-right">
+            <div class="nav12">
+                <div class="nav1">
+                    <a href="index.html">PRODUCTS</a>
+                </div>
+                <div class="nav2">
+                    <a href="cart.html">CART</a>
+                </div>
+            </div>
+            <hr class="break">
+            <p></p><br>
+            <p class="topic" id="detail-topic">Original cinnamon roll</p>
+        </div>
+      </div>
+
+      <div id="original-roll-detail">
+
+        <img id="roll-detail-img" alt="original cinnamon roll" class="detail_img"/>
+
+        <div id="selection">
+          <p class="customize">Customize our delicious,</p>
+          <p class="customize">hand-made cinnamon roll to</p>
+          <p class="customize">your liking!</p><br>
+          <p></p><br>
+          <p></p><br>
+          <p></p>
+
+          <form target="_blank" method="POST" action="/cart.html">
+            <label for="glazing">Glazing:</label>
+            <p> </p>
+            <select name="glazing" id="glazingOptions" class="choose" onchange="glazingChange(this)">
+            </select>
+            <p></p><br>
+            <p></p>
+
+            <label for="size">Pack size:</label>
+            <p></p>
+            <select name="size" id="packOptions" class="choose" onchange="packChange(this)">
+            </select>
+
+          </form>
+
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+            <div class = "item_total">
+              <div id="item_price"></div>
+              <div id="item_add">
+                <button onclick= "addToCart()" class="add">Add to Cart</button>
+              </div>
+            </div>
+            
+
+        </div>
+      </div>
+
+      
+      </body>
+</html>

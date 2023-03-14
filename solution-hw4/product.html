@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/product.css" type="text/css"/>
     <link rel="stylesheet" href="css/cart.css" type="text/css"/>
-    <script defer src="js/priceCal.js"></script>
     <script defer src="js/rollsData.js"></script>
+    <script defer src="js/priceCal.js"></script>
   </head>
+
   <body>
     <div class="navi">
-        <a href="index.html"><img src="assets/logo/logo-01.svg" alt="Picture of logo" class="logo"/></a>
+        <a href="index.html"><img src="assets/logo/logo-01.svg" alt="Logo" class="logo"/></a>
               <div class="navi-right">
                   <div class="naviGroup">
                       <div class="navi1">
@@ -25,11 +26,12 @@
                   </div>
                   <hr class="break">
                   <p></p><br>
-                  <p class="topic">Original cinnamon roll</p>
+                  <p class="topic" id="detail_topic">Original cinnamon roll</p>
               </div>
       </div>
-      <div id="original-detail">
-        <img src="assets/products/original-cinnamon-roll.jpg" alt="Picture of original cinnamon roll" class="detail_img"/>
+      <div id="original_detail">
+        <img id="roll_detail_img" alt="Cinnamon roll product" class="detail_img"/>
+
         <div id="select">
             <p class="customize">Customize our delicious,</p><br>
             <p class="customize">hand-made cinnamon roll to</p><br>
