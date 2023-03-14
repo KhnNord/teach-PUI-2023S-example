@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jiaxi Gu">
+    <title>Assignment6 Product Detail</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/product.css" type="text/css"/>
+    <link rel="stylesheet" href="css/cart.css" type="text/css"/>
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/priceCal.js"></script>
+  </head>
+
+  <body>
+    <div class="navi">
+        <a href="index.html"><img src="assets/logo/logo-01.svg" alt="Logo" class="logo"/></a>
+              <div class="navi-right">
+                  <div class="naviGroup">
+                      <div class="navi1">
+                          <a href="index.html">PRODUCTS</a>
+                      </div>
+                      <div class="navi2">
+                          <a href="cart.html">CART</a>
+                      </div>
+                  </div>
+                  <hr class="break">
+                  <p></p><br>
+                  <p class="topic" id="detail_topic">Original cinnamon roll</p>
+              </div>
+      </div>
+      <div id="original_detail">
+        <img id="roll_detail_img" alt="Cinnamon roll product" class="detail_img"/>
+
+        <div id="select">
+            <p class="customize">Customize our delicious,</p><br>
+            <p class="customize">hand-made cinnamon roll to</p><br>
+            <p class="customize">your liking!</p><br>
+            <p></p><br>
+            <p></p><br>
+            <p></p>
+            <form target="_blank" method="POST" action="/cart.html">
+              <label for="glazing">Glazing:</label>
+              <p></p>
+              <select name="glazing" id="glazing" class="choose" onchange="glazingChange(this)"></select>
+              <p></p><br>
+              <p></p><br>
+              <p></p>
+              <label for="size">Pack size:</label>
+              <p></p>
+              <select name="size" id="pack" class="choose" onchange="packChange(this)">
+              </select>
+            </form>
+            <p></p><br>
+            <p></p><br>
+            <p></p>
+            <div class = "item_total">
+              <div id="item_price"></div>
+              <div id="item_add">
+                <button onclick= "addCart()" class="add">Add to Cart</button>
+              </div>
+            </div>
+        </div>
+      </div>
+  </body>
+</html>

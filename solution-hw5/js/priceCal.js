@@ -1,3 +1,5 @@
+//author: Jiaxi Gu, andrew id: jiaxig
+
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 let rollType = params.get('roll');
